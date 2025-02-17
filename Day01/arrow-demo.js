@@ -1,4 +1,4 @@
-// mormal function
+// normal function
 var fn_add = function(x, y){
     let ans = x + y
     console.log(ans);
