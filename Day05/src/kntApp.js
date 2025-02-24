@@ -1,12 +1,16 @@
-import React from "react";
-import KntFuncEvent1 from "./components/kntFuncEvent1";
-import KntClassEvent1 from "./components/kntClassEvent1";
-import KntFuncCompEventProps from "./components/kntFuncCompEventProps";
-import KntClassCompEventProps from "./components/kntClassCompEventProps";
-import KntClassCompEventState from "./components/kntClassCompEventState";
-import KntClassCompEventPostData from "./components/kntClassCompEventPostData";
+import React, { Component } from 'react'
+import KntFuncEvent1 from './components/kntFuncEvent1'
+import KntFuncCompEventProps from './components/kntFuncCompEventProps'
+import KntClassCompEventProps from './components/kntClassCompEventProps'
+import KntClassCompEventState from './components/kntClassCompEventState'
+import KntClassCompEventPostData from './components/kntClassCompEventPostData'
+import KntClassEvent1 from './components/kntClassEvent1'
 
-function KntApp() {
+export default class KntApp extends Component {
+  kntHandleDataToApp = (content) =>{
+    alert(content);
+  }
+  render() {
     return (
       <div className="container border mt-3">
         <h2>K23CNT2 - Kim Ngọc Tâm - Event Form</h2>
@@ -36,8 +40,6 @@ function KntApp() {
           <><KntClassCompEventPostData onKntDataToApp={this.kntHandleDataToApp}/></>
         </div>
       </div>
-    );
+    )
   }
-
-
-export default KntApp;
+}
