@@ -25,7 +25,7 @@ export default class KntEventForm5 extends Component {
     return (
       <div className='alert alert-danger'>
         <h2>Form Student Info</h2>
-        <form onSubmit={this.kntHandleSubmit}>
+        <form>
             <div>
                 <label htmlFor='kntStudentName'>Name:</label>
                 <input type="text" name='kntName' id='kntName'
@@ -74,7 +74,7 @@ export default class KntEventForm5 extends Component {
                     <option value='ReactJS'>ReactJS</option>
                 </select>
             </div>
-            <button className='btn btn-primary'>Submit</button>
+            <button className='btn btn-primary' onClick={this.kntHandleSubmit}>Submit</button>
         </form>
       </div>
     )
