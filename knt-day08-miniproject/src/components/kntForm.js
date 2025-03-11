@@ -2,8 +2,14 @@
 import React, { Component } from 'react'
 
 export default class KntForm extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            ...this.props.kntItem,
+        };
+    }
   render() {
-    const { kntStudent } = this.props;
+    
     return (
       <div className='card'>
         <div className="card-body">
