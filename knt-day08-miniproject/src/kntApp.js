@@ -1,56 +1,22 @@
-import React, { Component } from 'react'
-import KntForm from './components/kntForm'
-import KntStudentList from './components/kntStudentList'
-import KntControl from './components/kntControl'
+import React from 'react'
+import KntStudentList from './components/kntStudentList';
 
-export default class KntApp extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-        kntStudentList:[
-            {
-                kntID: 'SV001',
-                kntName: 'Kim Tâm',
-                kntAge: 20,
-                kntGender: 'Nam',
-                kntBirthday: '2000/01/01',
-                kntBirthAddress: '',
-                kntAddress: '',
-            },
-        ],
-        selectedStudent: null,
-        
-    }
-  }
-  handleSelectStudent = (student) => {
-    this.setState({ selectedStudent: student })
-  }
-  handleUpdateStudent = (upodatedStudent) => {
-    this.setState((prevState) => {
-      const updatedStudents = prevState.students.map((student) =>
-        student.id === updatedStudent.kntID ? updatedStudent : student
-      );
-      return { students: updatedStudents, selectedStudent: null }
-    })
-  }
-  render() {
-    return (
-      <div className='row'>
-      <div className="col-lg-7 grid-margin strech-card">
-        <div className='card'>
-          <KntControl />
-          <KntStudentList students={this.state.students} onSelect={this.handleSelectStudent}/>
-          
-        </div>
-      </div>
-      <div className="col-5 grid-margin">
-        {this.state.selectedStudent && (
-          <KntForm 
-          student={this.state.selectedStudent}
-          onUpdateStudent={this.handleUpdateStudent}/>
-        )}
+export default function KntApp() {
+  const KntStudents = [{
+    kntID: 'SV001',
+    kntName: 'Kim Tam',
+    kntAge: 20,
+    kntGender: 1,
+    kntDOB: '01-01-2005',
+    kntBA: 'Hà Nội',
+    kntAddress: 'Hà Nội',
+  }];
+  return (
+    <div>
+      <h1 className='text-center'>Kim Ngọc Tâm - K23CNT2 - MiniProject01</h1>
+      <div>
+        <KntStudentList kntData={KntStudents}/>
       </div>
     </div>
-    )
-  }
+  )
 }

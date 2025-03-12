@@ -7,18 +7,18 @@ export default function KntApp() {
   const [kntMember, kntMemberSet] = useState([
     {
       kntID: "1",
-      kntFullName: "Nguyễn Văn A",
-      kntUserName: "nguyenvana",
+      kntFullName: "Trần Văn A",
+      kntUserName: "tranvana",
       kntPassword: "123456",
     },{
       kntID: "2",
-      kntFullName: "Trần Thị B",
-      kntUserName: "tranthib",
+      kntFullName: "Lê Thị B",
+      kntUserName: "lethib",
       kntPassword: "abcdef",
     },{
       kntID: "3",
-      kntFullName: "Lê Văn C",
-      kntUserName: "levanc",
+      kntFullName: "Đỗ Tuấn C",
+      kntUserName: "dovanc",
       kntPassword: "qwerty",
     }
   ]);
