@@ -6,17 +6,17 @@ import KntMemberAdd from './components/kntMemberAdd';
 export default function KntApp() {
   const [kntMember, kntMemberSet] = useState([
     {
-      kntID: "1",
+      kntID: "SV001",
       kntFullName: "Trần Văn A",
       kntUserName: "tranvana",
       kntPassword: "123456",
     },{
-      kntID: "2",
+      kntID: "SV002",
       kntFullName: "Lê Thị B",
       kntUserName: "lethib",
       kntPassword: "abcdef",
     },{
-      kntID: "3",
+      kntID: "SV003",
       kntFullName: "Đỗ Tuấn C",
       kntUserName: "dovanc",
       kntPassword: "qwerty",
